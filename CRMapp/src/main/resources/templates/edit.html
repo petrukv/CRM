@@ -26,13 +26,9 @@
       <input type="text" th:value="${person.city}" name="city" placeholder="City" class="form-control"><br>
       <h6>State</h6>
       <input type="text" th:value="${person.state}" name="state" placeholder="State" class="form-control"><br>
-      <!-- Змінене ім'я форми та використання Thymeleaf -->
       <form th:action="'/about/' + ${person.id} + '/edit'" th:method="post" method="POST" th:object="${person}">
-        <!-- Залиште інші поля як є -->
         <button type="submit" class="btn btn-success">Save changes</button>
       </form>
-
-
     </form>
   </div>
 </div>
