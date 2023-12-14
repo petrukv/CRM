@@ -59,7 +59,6 @@ public class MainController {
         return "edit";
     }
 
-    // В MainController
     @PostMapping("/about/{id}/edit")
     public String update(@ModelAttribute Info updatedInfo, Model model) {
         Info info = infoRepository.findById(updatedInfo.getId()).orElseThrow();
@@ -73,8 +72,6 @@ public class MainController {
         infoRepository.save(info);
         return "redirect:/";
     }
-
-
 
     @PostMapping("/about/{id}/delete")
     public String delete ( @PathVariable(value = "id") long id, Model model) {
